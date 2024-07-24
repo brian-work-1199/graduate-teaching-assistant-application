@@ -14,13 +14,21 @@ function App() {
           <Route path="/srm/home" element={<Home />} />
           <Route path="/srm/secured/product/browse" element={<ProductList />} />
           <Route path="/srm/secured/supplier/browse" element={<SupplierList />} />
-          <Route path="/srmweb/api/product/get/supplier/1" element={<SupplierProduct supplierId={1}/>} />
-          <Route path="/srmweb/api/product/get/supplier/2" element={<SupplierProduct supplierId={2}/>} />
+          <Route path="/srmweb/api/product/get/supplier/:supplierId" element={<SupplierProductsWithParams />} />
         </Routes>
       </Router>
     </div>
   );
 }
+
+const SupplierProductsWithParams: React.FC = () => {
+  const { supplierId } = useParams<{ supplierId: string }>();
+
+  if (supplierId) {
+    return <SupplierProduct supplierId={+supplierId} />;
+  }
+  return (<></>);
+};
 
 
 export default App;

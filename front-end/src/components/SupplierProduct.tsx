@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ProductSupplier } from '../types/Types';
+import '../styles/App.css';
 
 const SupplierProduct: React.FC<{ supplierId: number }> = ({ supplierId }) => {
   const [products, setProducts] = useState<ProductSupplier[]>([]);

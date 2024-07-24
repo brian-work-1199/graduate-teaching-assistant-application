@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-
 import Home from './pages/Home';
 import ProductList from './components/ProductList';
 import SupplierProduct from './components/SupplierProduct';
-import './App.css';
 import SupplierList from './components/SupplierList';
 
 function App() {

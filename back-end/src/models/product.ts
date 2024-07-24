@@ -1,6 +1,6 @@
 export interface Product {
     productId: number;
-    name: string;
+    productName: string;
     unitPrice: number;
     quantityInStock: number;
     dateSupplied: Date;
